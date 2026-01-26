@@ -1,0 +1,19 @@
+/* تأثير للرابط المفعّل */
+.nav-link.active {
+  color: #A78B6B; /* لون بني فاتح */
+  font-weight: bold;
+  border-bottom: 2px solid #A78B6B; /* خط تحت النص */
+  transition: color 0.3s ease;
+}
+
+/* تأثير hover للرابط */
+.nav-link:hover {
+  color: #A78B6B;
+}
+
+  .nav-link.active {
+    @apply text-primaryLight font-bold border-b-2 border-primaryLight;
+  }
+
+
+
