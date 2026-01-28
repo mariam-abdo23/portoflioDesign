@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Social Media Designs</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primaryLight: '#A78B6B',
+            primaryDark: '#3B3228',
+            bgLight: '#F3EFE0',
+            bgDark: '#1A1A1A',
+            textLight: '#3B3228',
+            textDark: '#E3DCC1',
+            blueDark: '#213C51',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      transition: opacity 0.3s ease;
+    }
+    #modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(167,139,107,0.9);
+      transition: transform 0.3s ease;
+    }
+    #modal .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5rem;
+      color: #E3DCC1;
+      cursor: pointer;
+      user-select: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    #modal .close-btn:hover {
+      color: #A78B6B;
+    }
+  </style>
+</head>
+<body class="bg-bgLight text-textLight font-sans transition-colors duration-700 dark:bg-bgDark dark:text-textDark">
+
+<nav class="fixed top-0 left-0 w-full bg-primaryDark shadow-lg z-50 transition-colors duration-700 dark:bg-bgDark">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-2 md:p-4">
+
+
+    <!-- Logo -->
+    <div class="flex items-center ">
+      <img src="images/1769024957040-019be218-f852-70b1-9d25-e317c59d6f29.png"
+           class="w-20 h-15 rounded-full" alt="Logo" />
+      <span class="text-xl font-bold text-bgLight dark:text-textDark">
+        Code Fluence
+      </span>
+    </div>
+
+    <!-- Desktop Links -->
+ <ul  id="nav-links" class="hidden md:flex gap-8 text-bgLight dark:text-textDark font-medium">
+  <li><a href="index.html" class="hover:text-primaryLight">Home</a></li>
+  <li><a href="index.html#portfolio" class="hover:text-primaryLight">Portfolio</a></li>
+  <li><a href="index.html#about" class="hover:text-primaryLight">About</a></li>
+  <li><a href="index.html#contact" class="hover:text-primaryLight">Contact</a></li>
+</ul>
+
+    <!-- Buttons -->
+    <div class="flex items-center gap-4">
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle"
+        class="p-2 rounded-full bg-bgLight text-primaryDark dark:bg-bgDark dark:text-primaryLight"
+        aria-label="Toggle Dark Mode">
+        🌙
+      </button>
+
+      <!-- Mobile Burger -->
+      <button id="menu-btn"
+        class="md:hidden text-bgLight dark:text-textDark text-2xl"
+        aria-label="Toggle Menu">
+        ☰
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+<ul id="mobile-menu" class="max-h-0 overflow-hidden flex flex-col gap-4 bg-primaryDark text-bgLight p-2 md:hidden dark:bg-bgDark dark:text-textDark transition-[max-height] duration-500 ease-in-out absolute top-full left-0 w-full z-40 rounded-b-lg shadow-lg">
+  <li><a href="index.html" class="block py-2 px-4 hover:bg-primaryLight hover:text-bgLight rounded transition">Home</a></li>
+  <li><a href="index.html#portfolio" class="block py-2 px-4 hover:bg-primaryLight hover:text-bgLight rounded transition">Portfolio</a></li>
+  <li><a href="index.html#about" class="block py-2 px-4 hover:bg-primaryLight hover:text-bgLight rounded transition">About</a></li>
+  <li><a href="index.html#contact" class="block py-2 px-4 hover:bg-primaryLight hover:text-bgLight rounded transition">Contact</a></li>
+</ul>
+
+</nav>
+
+
+
+      <!-- Dark mode toggle button -->
+      <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" class="focus:outline-none ml-4 transition-colors duration-700 text-bgLight dark:text-textDark">
+        <!-- Sun icon -->
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414m12.728 0l1.414-1.414M7.05 7.05L5.636 5.636M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+        <!-- Moon icon -->
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+        </svg>
+      </button>
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none ml-2 text-bgLight dark:text-textDark" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <path d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+
+
+  <!-- المحتوى الرئيسي -->
+  <main class="max-w-5xl mx-auto mt-40 p-6 bg-bgLight rounded-lg shadow-lg transition-colors duration-700 dark:bg-bgDark">
+    <h1 data-aos="fade-down" class="text-4xl font-bold mb-6">Restaurant Social Media Designs</h1>
+    <p data-aos="fade-up" data-aos-delay="100" class="mb-6 text-textLight dark:text-textDark font-semibold text-lg">
+      Social media post design for a fast food restaurant
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="./images/موكاب.png" alt="Mocup" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+      <img src="./images/desgin burger.png" alt="burger" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+      <img src="./images/pizaa.png" alt="Pizaa" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+      <img src="./images/desgin shaorma.png" alt="shaorma" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+      <img src="./images/hot dog.png" alt="hot dog" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+     
+    </div>
+  </main>
+
+  <!-- مودال الصور -->
+  <div id="modal" class="flex">
+    <span class="close-btn">&times;</span>
+    <img src="" alt="Large Design Image" />
+  </div>
+
+  <footer class="bg-primaryDark text-bgLight text-center py-6 mt-12 transition-colors duration-700 dark:bg-bgDark dark:text-textDark">
+    &copy; 2026 Mariam Abdelalim. All rights reserved.
+  </footer>
+
+  <script>
+    // تبديل قائمة الموبايل
+ // Mobile menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+  if (mobileMenu.classList.contains('open')) {
+    mobileMenu.style.maxHeight = null;
+    mobileMenu.classList.remove('open');
+  } else {
+    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+    mobileMenu.classList.add('open');
+  }
+});
+
+    // مودال الصور
+    const modal = document.getElementById('modal');
+    const modalImg = modal.querySelector('img');
+    const closeBtn = modal.querySelector('.close-btn');
+    const projectImages = document.querySelectorAll('.project-img');
+
+    projectImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalImg.src = '';
+      modalImg.alt = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        modalImg.src = '';
+        modalImg.alt = '';
+      }
+    });
+
+    // زر تبديل الوضع الداكن
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      darkModeToggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    });
+
+    // تعيين الأيقونة أول ما تحمل الصفحة
+    window.addEventListener('DOMContentLoaded', () => {
+      darkModeToggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+      // تأكد من أن قائمة الناف ليست مخفية في الموبايل
+      if(window.innerWidth < 768) {
+        navLinks.classList.add('hidden'); // مخفية افتراضياً في الموبايل
+      }
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1800,
+      once: true,
+    });
+  </script>
+
+</body>
+</html>
+
