@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dental Clinic Projects - Mariam Abdelalim</title>
+  <title>Cars Design Portfolio - Mariam Abdelalim</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primaryLight: '#A78B6B',  // Light brown
-            primaryDark: '#3B3228',   // Dark brown
-            bgLight: '#F3EFE0',       // Cream light
-            bgDark: '#1A1A1A',        // Dark black
-            textLight: '#3B3228',     // Medium brown text
-            textDark: '#E3DCC1',      // Light text
+            primaryLight: '#A78B6B',  // بني فاتح
+            primaryDark: '#3B3228',   // بني غامق
+            bgLight: '#F3EFE0',       // خلفية كريمية فاتحة
+            bgDark: '#1A1A1A',        // خلفية داكنة
+            textLight: '#3B3228',     // نص بني متوسط
+            textDark: '#E3DCC1',      // نص فاتح
+            blueDark: '#213C51',
           }
         }
       }
     }
   </script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <style>
-    /* Modal style */
+    /* مودال */
     #modal {
       display: none;
       position: fixed;
@@ -58,6 +64,7 @@
   </style>
 </head>
 <body class="bg-bgLight text-textLight font-sans transition-colors duration-700 dark:bg-bgDark dark:text-textDark">
+
 <nav class="fixed top-0 left-0 w-full bg-primaryDark shadow-lg z-50 transition-colors duration-700 dark:bg-bgDark">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-2 md:p-4">
 
@@ -130,34 +137,42 @@
       </button>
     </div>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto mt-28 p-6 bg-bgLight rounded-lg shadow-lg transition-colors duration-700 dark:bg-bgDark">
-    <h1 class="text-4xl font-bold mb-2">Dental Clinic Projects</h1>
-    <p data-aos="fade-up" data-aos-delay="100" class="mb-4 text-textLight dark:text-textDark text-lg font-semibold">New designs coming soon</p>
-    <button data-aos="fade-up" data-aos-delay="300" onclick="location.href='index.html#contact'" class="mb-8 px-6 py-3 bg-primaryLight text-bgLight rounded-lg shadow hover:bg-primaryDark hover:text-bgLight transition duration-300 font-semibold">
-      Contact Us
-    </button>
-    <p class="mb-6 text-textLight dark:text-textDark">
-      Here is a collection of social media design projects I created for dental clinics. These designs focus on clean, modern visuals to attract more patients and promote dental health awareness.
-    </p>
+
+
+  <!-- المحتوى الرئيسي -->
+<main class="max-w-5xl mx-auto mt-28 p-6 bg-bgLight rounded-lg shadow-lg transition-colors duration-700 dark:bg-bgDark">
+    
+  <h1 data-aos="fade-down" class="text-4xl font-bold mb-6">Car Design Portfolio</h1>
+  
+  <p data-aos="fade-up" data-aos-delay="100" class="mb-4 text-textLight dark:text-textDark font-semibold text-lg">
+    A collection of creative and professional designs created specifically for car and automotive projects.
+  </p>
+  
+  <button 
+    data-aos="fade-up" 
+    data-aos-delay="300" 
+    onclick="location.href='index.html#contact'" 
+    class="mb-6 px-6 py-3 bg-primaryLight text-bgLight rounded-lg shadow hover:bg-primaryDark hover:text-bgLight transition duration-300 font-semibold"
+  >
+    Contact Me
+  </button>
+  
+  <p data-aos="fade-up" data-aos-delay="100" class="mb-6 text-textLight dark:text-textDark">
+    Explore a variety of automotive design projects including car posters, advertisements, social media visuals, and branding concepts.
+  </p>
+
+
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="./images/Untitled-5.png" alt="Dental Project 1" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/تنظيف الاسنان.png" alt="Dental Project 2" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/تبييض الاسنان.png" alt="Dental Project 3" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/حشو الاسنان.png" alt="Dental Project 4" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/زراعة الاسنان.png" alt="Dental Project 5" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/اراء عملائنا.png" alt="Dental Project 6" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/23c210ad9a5c4749b3a3ef04ab43e240.jpg" alt="Dental Project 7" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/عيادة الربيع.png" alt="Dental Project8" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-      <img src="./images/O7MP4O1.png" alt="Dental Project 7" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-     <img src="./images/O7MP4O2.png" alt="Dental Project 7" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
-     <img src="./images/O7MP4O3.png" alt="Dental Project 7" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+      
      
+      <img src="./images/car 1.png" alt="Car desgin 2" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+      <img src="./images/car 2.png" alt="Car desgin 3" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
+         <img src="./images/Untitled-2-Recovered.png" alt="Car desgin 1" class="rounded-lg shadow-md cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl project-img" />
     </div>
   </main>
 
-  <!-- Modal for large image -->
+  <!-- مودال الصور -->
   <div id="modal" class="flex">
     <span class="close-btn">&times;</span>
     <img src="" alt="Large Project Image" />
@@ -167,8 +182,8 @@
     &copy; 2026 Mariam Abdelalim. All rights reserved.
   </footer>
 
-  <!-- Scripts -->
-  <script>
+  <!-- السكريبتات -->
+<script>
  // Mobile menu toggle
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -184,54 +199,47 @@ menuBtn.addEventListener('click', () => {
 });
 
 
-    // Modal functionality
-    const modal = document.getElementById('modal');
-    const modalImg = modal.querySelector('img');
-    const closeBtn = modal.querySelector('.close-btn');
-    const projectImages = document.querySelectorAll('.project-img');
+/* ===== Dark Mode ===== */
+const darkToggle = document.getElementById("dark-mode-toggle");
 
-    projectImages.forEach(img => {
-      img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-      });
-    });
+darkToggle.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
 
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalImg.src = '';
-      modalImg.alt = '';
-    });
+  if (document.documentElement.classList.contains("dark")) {
+    darkToggle.textContent = "☀️";
+  } else {
+    darkToggle.textContent = "🌙";
+  }
+});
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        modalImg.src = '';
-        modalImg.alt = '';
-      }
-    });
 
-    // Dark Mode toggle
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    darkModeToggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      if(document.documentElement.classList.contains('dark')) {
-        darkModeToggle.textContent = '☀️';
-      } else {
-        darkModeToggle.textContent = '🌙';
-      }
-    });
+/* ===== Modal Images ===== */
+const modal = document.getElementById('modal');
+const modalImg = modal.querySelector('img');
+const closeBtn = modal.querySelector('.close-btn');
+const projectImages = document.querySelectorAll('.project-img');
 
-    if(document.documentElement.classList.contains('dark')) {
-      darkModeToggle.textContent = '☀️';
-    } else {
-      darkModeToggle.textContent = '🌙';
-    }
-  </script>
+projectImages.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+  });
+});
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+</script>
+
+
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -239,5 +247,6 @@ menuBtn.addEventListener('click', () => {
       once: true,
     });
   </script>
+
 </body>
 </html>
